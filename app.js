@@ -6,7 +6,9 @@ app.get("/", (req,res) => {
   res.send("Bot is online");
 });
 
-app.listen(5000, () => console.log("listening to port 5000"));
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => console.log("listening to port 5000"));
 
 
 import selfcore from "selfcore";

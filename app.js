@@ -6,22 +6,22 @@ app.get("/", (req,res) => {
   res.send("Bot is online");
 });
 
-app.listen(5000, () => console.log("lisrening to port 5000"));
+app.listen(5000, () => console.log("listening to port 5000"));
 
 
 import selfcore from "selfcore";
 
 const client = new selfcore();
 const gateway = new selfcore.Gateway(
-  "YOUR TOKEN"
+  "ODc2MDc5Nzg1NzY2NDM2OTA0.YYmWGg.3IyQ9au-G68HCsuMUQVEfgfRlpQ"
 );
 
 gateway.on("message", (m) => {
-  if (m.channel_id === "CHANNEL_ID") {
+  if (m.channel_id === "875264186127626250") {
     let content = m.content ? m.content : { embeds: [m.embeds[0]] };
 
     client.sendWebhook(
-      "WEBHOOKLINK",
+      "https://discord.com/api/webhooks/907405815906988062/lBZQmLFbvFfXmg5Y7YUa8LliEDNM9FQjZ32Dyz2rmm4DkPBjWaKr0Tt2iZOKptBWpb4e",
       content
     );
   }
